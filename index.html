@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>教育学部教科書（デジタル・紙）・指導書ポータル</title>
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --secondary-color: #4299e1;
+            --light-color: #ebf8ff;
+            --dark-color: #1a365d;
+            --border-color: #bee3f8;
+            --hover-color: #3182ce;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f8fafc;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            text-align: center;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: white;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .tabs li {
+            flex: 0 0 auto;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .tabs li a {
+            display: block;
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 15px 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tabs li a:hover {
+            background-color: var(--light-color);
+            border-bottom: 3px solid var(--hover-color);
+        }
+        
+        .tabs li a.active {
+            color: var(--dark-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .card {
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .card-title {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 10px;
+        }
+        
+        .card p {
+            margin-bottom: 15px;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        table th, table td {
+            border: 1px solid var(--border-color);
+            padding: 10px 15px;
+            text-align: left;
+            white-space: nowrap;
+        }
+        
+        table th {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        table a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        table a:hover {
+            color: var(--hover-color);
+            text-decoration: underline;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .btn:hover {
+            background-color: var(--hover-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        .useful-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .link-card {
+            flex: 1;
+            min-width: 200px;
+            background: var(--light-color);
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .link-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .link-card a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .link-card a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            header h1 {
+                font-size: 1.6rem;
+            }
+            
+            table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .useful-links {
+                flex-direction: column;
+            }
+            
+            .card {
+                padding: 15px 10px;
+            }
+            
+            .tab-content {
+                padding: 15px 10px;
+            }
+        }
+        
+        /* スマートフォン向け */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.4rem;
+            }
+            
+            header p {
+                font-size: 0.9rem;
+            }
+            
+            .tabs li a {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .card-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>教育学部教科書（デジタル・紙）・指導書ポータル</h1>
+            <p>教育学部が所有する教科書・指導書に関する情報ポータルサイト</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul class="tabs">
+                <li><a href="javascript:void(0);" class="tab-link active" data-tab="guide">利用ガイド</a></li>
+                <li><a href="javascript:void(0);" class="tab-link" data-tab="digital">デジタル教科書一覧</a></li>
+                <li><a href="javascript:void(0);" class="tab-link" data-tab="paper">紙の教科書一覧</a></li>
+                <li><a href="javascript:void(0);" class="tab-link" data-tab="links">有用なリンク</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <!-- 利用ガイド -->
+        <div id="guide" class="tab-content active">
+            <h2 class="section-title">教科書・指導書利用ガイド</h2>
+            
+            <div class="card">
+                <h3 class="card-title">ポータルサイトについて</h3>
+                <p>このポータルサイトでは、教育学部で所有する教科書（デジタル・紙）・指導書の利用方法や貸出ルールについてご案内しています。 学習・研究・実習前の準備などにご活用ください。</p>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">デジタル教科書の貸出ルールと手続き</h3>
+                <p>デジタル教科書をご利用いただく際は、以下のルールと手続きに従ってください：</p>
+                <ul>
+                    <li>利用期間は原則として2週間です。延長が必要な場合は事前に申請してください。</li>
+                    <li>一度に貸出可能なデジタル教科書は3点までです。</li>
+                    <li>教育実習や授業での利用の場合は、実習・授業期間中の長期貸出が可能です。</li>
+                    <li>貸出の際は、学生証または教職員証が必要です。</li>
+                    <li>デジタル教科書のライセンス数には限りがあるため、予約制となっている教科書もあります。</li>
+                </ul>
+                <p>貸出申請は下記の貸出フォームから行ってください。申請後、教育学部事務室から利用可能日のご連絡をいたします。</p>
+                <a href="#" class="btn">貸出フォームへ</a>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">デジタル教科書体験版一覧</h3>
+                <p>以下の出版社サイトでデジタル教科書の体験版を試すことができます。実際の教科書の機能や使用感を確認したい方はぜひご活用ください。</p>
+                <p class="text-sm" style="color: #666; margin-bottom: 15px;">2024年5月30日更新</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>出版社</th>
+                            <th class="text-center">デジタル教科書の体験版</th>
+                            <th class="text-center">操作説明マニュアル等</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>東京書籍</td>
+                            <td class="text-center"><a href="https://www.tokyo-shoseki.co.jp/ict/taiken" target="_blank">〇</a></td>
+                            <td class="text-center"><a href="https://d-support.tokyo-shoseki.co.jp/shou/index.html" target="_blank">〇</a></td>
+                        </tr>
+                        <tr>
+                            <td>学校図書</td>
+                            <td class="text-center"><a href="https://support.gakuto.co.jp/digi-nowtouse/" target="_blank">〇</a></td>
+                            <td class="text-center"><a href="https://support.gakuto.co.jp/digi-nowtouse/" target="_blank">〇</a></td>
+                        </tr>
+                        <tr>
+                            <td>教育出版</td>
+                            <td class="text-center"><a href="https://d-support.kyoiku-shuppan.co.jp/" target="_blank">〇</a></td>
+                            <td class="text-center"><a href="https://d-support.kyoiku-shuppan.co.jp/manual/" target="_blank">〇</a></td>
+                        </tr>
+                        <tr>
+                            <td>光村図書</td>
+                            <td class="text-center"><a href="https://2022-digital.mitsumura-tosho.co.jp/" target="_blank">〇</a></td>
+                            <td class="text-center"><a href="https://2022-digital.mitsumura-tosho.co.jp/" target="_blank">〇</a></td>
+                        </tr>
+                        <tr>
+                            <td>日本文教出版</td>
+                            <td class="text-center"><a href="https://www.nichibun-g.co.jp/digital_support_front/" target="_blank">〇</a></td>
+                            <td class="text-center"><a href="https://www.nichibun-g.co.jp/digital_support3/" target="_blank">〇</a></td>
+                        </tr>
+                        <tr>
+                            <td>帝国書院</td>
+                            <td class="text-center"><a href="https://www.teikokushoin.co.jp/junior/digital-textbook/" target="_blank">〇</a></td>
+                            <td class="text-center"><a href="https://ict.teikokushoin.co.jp/support/" target="_blank">〇</a></td>
+                        </tr>
+                        <tr>
+                            <td>大日本図書</td>
+                            <td class="text-center"><a href="https://www.dainippon-tosho.co.jp/digital_textbook/index.html" target="_blank">〇</a></td>
+                            <td class="text-center">
+                                <a href="https://www.dainippon-tosho.co.jp/newsletter/detail.php?id=328" target="_blank">〇</a>
+                                <span style="font-size: 0.85em; color: #666;">(学習者用)</span>
+                                <a href="https://www.dainippon-tosho.co.jp/newsletter/detail.php?id=329" target="_blank">〇</a>
+                                <span style="font-size: 0.85em; color: #666;">(指導者用)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>啓林館</td>
+                            <td class="text-center"><a href="https://www.shinko-keirin.co.jp/keirinkan/digital/dtext/" target="_blank">〇</a></td>
+                            <td class="text-center"><a href="https://www.shinko-keirin.co.jp/keirinkan/sho/kensyudouga/" target="_blank">〇</a></td>
+                        </tr>
+                        <tr>
+                            <td>信州教育出版社</td>
+                            <td class="text-center"><a href="http://www.shinkyo-pub.or.jp/kyokasyo_sp/digital_textbook/digital_textbook_index.html" target="_blank">〇</a></td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td>教育芸術社</td>
+                            <td class="text-center"><a href="https://www.kyogei.co.jp/digitaltextbook/" target="_blank">〇</a></td>
+                            <td class="text-center"><a href="https://www.kyogei.co.jp/cloudtextbook" target="_blank">〇</a></td>
+                        </tr>
+                        <tr>
+                            <td>開隆堂</td>
+                            <td class="text-center"><a href="http://digital-kairyudo.jp/" target="_blank">〇</a></td>
+                            <td class="text-center"><a href="https://www.kairyudo.co.jp/contents/06_hanbai/digital-textbook/troubleshoot/210824.html" target="_blank">〇</a></td>
+                        </tr>
+                        <tr>
+                            <td>学研</td>
+                            <td class="text-center"><a href="https://gakkokyoiku.gakken.co.jp/" target="_blank">〇</a></td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td>廣済堂あかつき</td>
+                            <td class="text-center"><a href="https://www.aktk.co.jp/r3-doutoku/digital" target="_blank">〇</a></td>
+                            <td class="text-center"><a href="https://www.aktk.co.jp/wp/wp-content/themes/akatsuki/assets/img/doutoku-r3/files/2022user_manual.pdf" target="_blank">〇</a></td>
+                        </tr>
+                        <tr>
+                            <td>三省堂</td>
+                            <td class="text-center"><a href="https://tb.sanseido-publ.co.jp/digitaltext/" target="_blank">〇</a></td>
+                            <td class="text-center"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- デジタル教科書一覧 -->
+        <div id="digital" class="tab-content">
+            <h2 class="section-title">デジタル教科書一覧</h2>
+            <p>教育学部が所有するデジタル教科書の一覧です。貸出を希望される方は、利用ガイドの貸出手続きをご確認ください。</p>
+            
+            <h3 class="card-title">小学校教科書</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>教科</th>
+                        <th>学年</th>
+                        <th>教科書会社</th>
+                        <th>利用形態</th>
+                        <th>ライセンス数</th>
+                        <th>利用制限</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>算数</td>
+                        <td>1〜6年</td>
+                        <td>啓林館</td>
+                        <td>クラウド</td>
+                        <td>各30</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>算数</td>
+                        <td>1〜6年</td>
+                        <td>東京書籍</td>
+                        <td>クラウド</td>
+                        <td>各30</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>国語</td>
+                        <td>1〜6年</td>
+                        <td>光村図書</td>
+                        <td>クラウド</td>
+                        <td>各30</td>
+                        <td>教員PCか学校備品PC</td>
+                    </tr>
+                    <tr>
+                        <td>国語</td>
+                        <td>1〜6年</td>
+                        <td>東京書籍</td>
+                        <td>クラウド</td>
+                        <td>各30</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>理科</td>
+                        <td>3〜6年</td>
+                        <td>啓林館</td>
+                        <td>クラウド</td>
+                        <td>各30</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>社会</td>
+                        <td>3〜6年</td>
+                        <td>東京書籍</td>
+                        <td>クラウド</td>
+                        <td>各30</td>
+                        <td>教員PC</td>
+                    </tr>
+                    <tr>
+                        <td>社会</td>
+                        <td>3〜6年</td>
+                        <td>教育出版</td>
+                        <td>クラウド</td>
+                        <td>各30</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>家庭科</td>
+                        <td>5・6年上・下</td>
+                        <td>開隆堂</td>
+                        <td>クラウド</td>
+                        <td>各20</td>
+                        <td>教員PC</td>
+                    </tr>
+                    <tr>
+                        <td>英語</td>
+                        <td>5・6年</td>
+                        <td>東京書籍</td>
+                        <td>クラウド</td>
+                        <td>各30</td>
+                        <td>教員PC</td>
+                    </tr>
+                    <tr>
+                        <td>英語</td>
+                        <td>5・6年</td>
+                        <td>光村図書</td>
+                        <td>クラウド</td>
+                        <td>各30</td>
+                        <td>教員PCか学校備品PC</td>
+                    </tr>
+                    <tr>
+                        <td>生活</td>
+                        <td>上・下</td>
+                        <td>東京書籍</td>
+                        <td>クラウド</td>
+                        <td>各30</td>
+                        <td>教員PC</td>
+                    </tr>
+                    <tr>
+                        <td>音楽</td>
+                        <td>1〜6年</td>
+                        <td>教育芸術社</td>
+                        <td>クラウド・DVD</td>
+                        <td>各30</td>
+                        <td>教員PC</td>
+                    </tr>
+                    <tr>
+                        <td>図工</td>
+                        <td>1〜6年上・下</td>
+                        <td>日本文教出版</td>
+                        <td>クラウド・DVD</td>
+                        <td></td>
+                        <td>教員PC</td>
+                    </tr>
+                    <tr>
+                        <td>図工</td>
+                        <td>1〜6年上・下</td>
+                        <td>開隆堂</td>
+                        <td>クラウド</td>
+                        <td>各20</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>道徳</td>
+                        <td>1〜6年</td>
+                        <td>光村図書</td>
+                        <td>クラウド・DVD</td>
+                        <td>30</td>
+                        <td>教員PC</td>
+                    </tr>
+                    <tr>
+                        <td>保健</td>
+                        <td>3〜6年</td>
+                        <td>学研</td>
+                        <td>クラウド・DVD</td>
+                        <td>1</td>
+                        <td>教員PC</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3 class="card-title">中学校教科書</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>教科</th>
+                        <th>学年</th>
+                        <th>題名</th>
+                        <th>教科書会社</th>
+                        <th>ライセンス形態</th>
+                        <th>利用制限</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>英語</td>
+                        <td>1年</td>
+                        <td>中学校英語</td>
+                        <td>三省堂</td>
+                        <td>永久ライセンス</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>数学</td>
+                        <td>2年</td>
+                        <td>中学校数学</td>
+                        <td>大日本図書</td>
+                        <td>年間ライセンス</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 紙の教科書一覧 -->
+        <div id="paper" class="tab-content">
+            <h2 class="section-title">紙の教科書一覧</h2>
+            <p>教育学部が所有する紙の教科書の一覧です。閲覧・貸出を希望される方は教育学部図書室にお問い合わせください。</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>教科書会社</th>
+                        <th>題名</th>
+                        <th>学年</th>
+                        <th>所有数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>東京書籍</td>
+                        <td>新しい国語</td>
+                        <td>小学1年</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>東京書籍</td>
+                        <td>新しい国語</td>
+                        <td>小学2年</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>東京書籍</td>
+                        <td>新しい国語</td>
+                        <td>小学3年</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>東京書籍</td>
+                        <td>新しい国語</td>
+                        <td>小学4年</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>東京書籍</td>
+                        <td>新しい国語</td>
+                        <td>小学5年</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>東京書籍</td>
+                        <td>新しい国語</td>
+                        <td>小学6年</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>大日本図書</td>
+                        <td>たのしい算数</td>
+                        <td>小学1年</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>大日本図書</td>
+                        <td>たのしい算数</td>
+                        <td>小学2年</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>大日本図書</td>
+                        <td>たのしい算数</td>
+                        <td>小学3年</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>大日本図書</td>
+                        <td>たのしい算数</td>
+                        <td>小学4年</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>大日本図書</td>
+                        <td>たのしい算数</td>
+                        <td>小学5年</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>大日本図書</td>
+                        <td>たのしい算数</td>
+                        <td>小学6年</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>教育出版</td>
+                        <td>未来をひらく社会</td>
+                        <td>小学3年</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>教育出版</td>
+                        <td>未来をひらく社会</td>
+                        <td>小学4年</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>教育出版</td>
+                        <td>未来をひらく社会</td>
+                        <td>小学5年</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>教育出版</td>
+                        <td>未来をひらく社会</td>
+                        <td>小学6年</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>啓林館</td>
+                        <td>わくわく理科</td>
+                        <td>小学3年</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>啓林館</td>
+                        <td>わくわく理科</td>
+                        <td>小学4年</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>啓林館</td>
+                        <td>わくわく理科</td>
+                        <td>小学5年</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>啓林館</td>
+                        <td>わくわく理科</td>
+                        <td>小学6年</td>
+                        <td>8</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 有用なリンク -->
+        <div id="links" class="tab-content">
+            <h2 class="section-title">有用なリンク</h2>
+            <p>デジタル教科書や教材に関する有用なリンク集です。</p>
+            
+            <div class="useful-links">
+                <div class="link-card">
+                    <h3>教科書会社公式サイト</h3>
+                    <a href="#" target="_blank">東京書籍</a>
+                    <a href="#" target="_blank">教育出版</a>
+                    <a href="#" target="_blank">啓林館</a>
+                    <a href="#" target="_blank">学校図書</a>
+                    <a href="#" target="_blank">大日本図書</a>
+                    <a href="#" target="_blank">開隆堂</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3>デジタル教科書関連情報</h3>
+                    <a href="#" target="_blank">デジタル教科書教材協議会</a>
+                    <a href="#" target="_blank">文部科学省 - デジタル教科書活用推進</a>
+                    <a href="#" target="_blank">GIGAスクール構想</a>
+                    <a href="#" target="_blank">ICT教育ニュース</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3>学内リソース</h3>
+                    <a href="#" target="_blank">教育学部図書室</a>
+                    <a href="#" target="_blank">教育実習支援センター</a>
+                    <a href="#" target="_blank">情報メディアセンター</a>
+                    <a href="#" target="_blank">デジタル教科書利用マニュアル</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3>教材・授業研究</h3>
+                    <a href="#" target="_blank">授業設計支援システム</a>
+                    <a href="#" target="_blank">教材データベース</a>
+                    <a href="#" target="_blank">授業実践事例集</a>
+                    <a href="#" target="_blank">教育実践研究紀要</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>教育学部デジタル教科書ポータル © 2025 教育学部</p>
+            <p>お問い合わせ: digital-textbook@example.ac.jp</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            // 現在のアクティブタブを保存する変数
+            let activeTabId = 'guide'; // デフォルトは利用ガイド
+            
+            // URLから現在のタブを取得（ハッシュを使わない）
+            const urlParams = new URLSearchParams(window.location.search);
+            const tabParam = urlParams.get('tab');
+            if (tabParam) {
+                activeTabId = tabParam;
+            }
+            
+            // タブを切り替える関数
+            function switchTab(tabId) {
+                // Remove active class from all tabs and tab contents
+                tabLinks.forEach(function(link) {
+                    link.classList.remove('active');
+                });
+                
+                tabContents.forEach(function(content) {
+                    content.classList.remove('active');
+                });
+                
+                // Add active class to current tab and tab content
+                const currentTab = document.querySelector(`.tab-link[data-tab="${tabId}"]`);
+                if (currentTab) {
+                    currentTab.classList.add('active');
+                }
+                
+                const currentContent = document.getElementById(tabId);
+                if (currentContent) {
+                    currentContent.classList.add('active');
+                }
+                
+                // 現在のアクティブタブを保存
+                activeTabId = tabId;
+            }
+            
+            // 初期タブの設定
+            switchTab(activeTabId);
+            
+            // タブクリックイベント
+            tabLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tabId = this.getAttribute('data-tab');
+                    switchTab(tabId);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
