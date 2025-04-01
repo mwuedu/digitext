@@ -179,6 +179,33 @@
             text-decoration: underline;
         }
         
+        .pdf-container {
+            margin: 20px 0;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .pdf-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        
+        .pdf-actions .btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .pdf-actions .btn:hover {
+            background-color: var(--hover-color);
+        }
+        
         .btn {
             display: inline-block;
             background-color: var(--secondary-color);
@@ -312,7 +339,6 @@
                 <li><a href="javascript:void(0);" class="tab-link active" data-tab="guide">利用ガイド</a></li>
                 <li><a href="javascript:void(0);" class="tab-link" data-tab="digital">デジタル教科書一覧</a></li>
                 <li><a href="javascript:void(0);" class="tab-link" data-tab="paper">紙の教科書一覧</a></li>
-                <li><a href="javascript:void(0);" class="tab-link" data-tab="links">有用なリンク</a></li>
             </ul>
         </div>
     </nav>
@@ -659,183 +685,22 @@
         <!-- 紙の教科書一覧 -->
         <div id="paper" class="tab-content">
             <h2 class="section-title">紙の教科書一覧</h2>
-            <p>教育学部が所有する紙の教科書の一覧です。閲覧・貸出を希望される方は教育学部図書室にお問い合わせください。</p>
+            <p>教育学部が所有する紙の教科書の一覧です。詳細な情報は以下のPDFでご確認ください。</p>
             
-            <table>
-                <thead>
-                    <tr>
-                        <th>教科書会社</th>
-                        <th>題名</th>
-                        <th>学年</th>
-                        <th>所有数</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>東京書籍</td>
-                        <td>新しい国語</td>
-                        <td>小学1年</td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td>東京書籍</td>
-                        <td>新しい国語</td>
-                        <td>小学2年</td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td>東京書籍</td>
-                        <td>新しい国語</td>
-                        <td>小学3年</td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td>東京書籍</td>
-                        <td>新しい国語</td>
-                        <td>小学4年</td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td>東京書籍</td>
-                        <td>新しい国語</td>
-                        <td>小学5年</td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td>東京書籍</td>
-                        <td>新しい国語</td>
-                        <td>小学6年</td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td>大日本図書</td>
-                        <td>たのしい算数</td>
-                        <td>小学1年</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>大日本図書</td>
-                        <td>たのしい算数</td>
-                        <td>小学2年</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>大日本図書</td>
-                        <td>たのしい算数</td>
-                        <td>小学3年</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>大日本図書</td>
-                        <td>たのしい算数</td>
-                        <td>小学4年</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>大日本図書</td>
-                        <td>たのしい算数</td>
-                        <td>小学5年</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>大日本図書</td>
-                        <td>たのしい算数</td>
-                        <td>小学6年</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>教育出版</td>
-                        <td>未来をひらく社会</td>
-                        <td>小学3年</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>教育出版</td>
-                        <td>未来をひらく社会</td>
-                        <td>小学4年</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>教育出版</td>
-                        <td>未来をひらく社会</td>
-                        <td>小学5年</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>教育出版</td>
-                        <td>未来をひらく社会</td>
-                        <td>小学6年</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>啓林館</td>
-                        <td>わくわく理科</td>
-                        <td>小学3年</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>啓林館</td>
-                        <td>わくわく理科</td>
-                        <td>小学4年</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>啓林館</td>
-                        <td>わくわく理科</td>
-                        <td>小学5年</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>啓林館</td>
-                        <td>わくわく理科</td>
-                        <td>小学6年</td>
-                        <td>8</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="pdf-container">
+                <object data="textbooklist.pdf" type="application/pdf" width="100%" height="600">
+                    <p>お使いのブラウザでPDFを表示できません。<a href="textbooklist.pdf" target="_blank">PDFを直接開く</a>か、<a href="textbooklist.pdf" download>ダウンロード</a>してください。</p>
+                </object>
+            </div>
+            
+            <div class="pdf-actions">
+                <a href="textbooklist.pdf" target="_blank" class="btn">PDFを新しいタブで開く</a>
+                <a href="textbooklist.pdf" download class="btn">PDFをダウンロード</a>
+            </div>
         </div>
         
         <!-- 有用なリンク -->
-        <div id="links" class="tab-content">
-            <h2 class="section-title">有用なリンク</h2>
-            <p>デジタル教科書や教材に関する有用なリンク集です。</p>
-            
-            <div class="useful-links">
-                <div class="link-card">
-                    <h3>教科書会社公式サイト</h3>
-                    <a href="#" target="_blank">東京書籍</a>
-                    <a href="#" target="_blank">教育出版</a>
-                    <a href="#" target="_blank">啓林館</a>
-                    <a href="#" target="_blank">学校図書</a>
-                    <a href="#" target="_blank">大日本図書</a>
-                    <a href="#" target="_blank">開隆堂</a>
-                </div>
-                
-                <div class="link-card">
-                    <h3>デジタル教科書関連情報</h3>
-                    <a href="#" target="_blank">デジタル教科書教材協議会</a>
-                    <a href="#" target="_blank">文部科学省 - デジタル教科書活用推進</a>
-                    <a href="#" target="_blank">GIGAスクール構想</a>
-                    <a href="#" target="_blank">ICT教育ニュース</a>
-                </div>
-                
-                <div class="link-card">
-                    <h3>学内リソース</h3>
-                    <a href="#" target="_blank">教育学部図書室</a>
-                    <a href="#" target="_blank">教育実習支援センター</a>
-                    <a href="#" target="_blank">情報メディアセンター</a>
-                    <a href="#" target="_blank">デジタル教科書利用マニュアル</a>
-                </div>
-                
-                <div class="link-card">
-                    <h3>教材・授業研究</h3>
-                    <a href="#" target="_blank">授業設計支援システム</a>
-                    <a href="#" target="_blank">教材データベース</a>
-                    <a href="#" target="_blank">授業実践事例集</a>
-                    <a href="#" target="_blank">教育実践研究紀要</a>
-                </div>
-            </div>
-        </div>
+        <!-- このセクションは削除しました -->
     </main>
     
     <footer>
@@ -856,7 +721,7 @@
             // URLから現在のタブを取得（ハッシュを使わない）
             const urlParams = new URLSearchParams(window.location.search);
             const tabParam = urlParams.get('tab');
-            if (tabParam) {
+            if (tabParam && ['guide', 'digital', 'paper'].includes(tabParam)) {
                 activeTabId = tabParam;
             }
             
