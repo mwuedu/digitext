@@ -325,6 +325,86 @@
                 font-size: 1.1rem;
             }
         }
+            /* タブのスクロール表示を改善 */
+            .tabs::-webkit-scrollbar {
+                height: 4px;
+            }
+            
+            .tabs::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 4px;
+            }
+            
+            .tabs::-webkit-scrollbar-thumb {
+                background: var(--secondary-color);
+                border-radius: 4px;
+            }
+            
+            /* スクロール可能な要素に視覚的インジケーターを追加 */
+            @media (max-width: 768px) {
+                .tabs {
+                    position: relative;
+                    padding-bottom: 8px;
+                }
+                
+                .tabs::after {
+                    content: '→';
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: var(--secondary-color);
+                    font-weight: bold;
+                    animation: pulse 1.5s infinite;
+                }
+                
+                @keyframes pulse {
+                    0% { opacity: 0.3; }
+                    50% { opacity: 1; }
+                    100% { opacity: 0.3; }
+                }
+                
+                /* テーブルスクロールインジケーター */
+                .table-container {
+                    position: relative;
+                    overflow-x: auto;
+                    margin-bottom: 20px;
+                    padding-bottom: 8px;
+                }
+                
+                .table-container::after {
+                    content: '⟷ スクロールできます';
+                    display: block;
+                    text-align: center;
+                    padding: 5px;
+                    color: var(--secondary-color);
+                    font-size: 0.8rem;
+                }
+                
+                /* ヘッダーのタイトル下のテキスト調整 */
+                header p {
+                    font-size: 0.95rem;
+                    line-height: 1.4;
+                    max-width: 95%;
+                    margin: 0 auto;
+                    padding: 0 10px;
+                }
+            }
+            
+            /* より小さいモバイル画面向け調整 */
+            @media (max-width: 480px) {
+                header p {
+                    font-size: 0.85rem;
+                }
+                
+                .tabs li a {
+                    padding: 12px 15px;
+                    font-weight: 600;
+                }
+            }
+            
+            
+
     </style>
 </head>
 <body>
@@ -415,7 +495,7 @@
         <h3 class="card-title">🔍 デジタル教科書体験版一覧</h3>
         <p>以下の出版社サイトでデジタル教科書の体験版を試すことができます。実際の教科書の機能や使用感を確認したい方はぜひご活用ください。</p>
         <p class="text-sm" style="color: #666; margin-bottom: 15px;">2024年5月30日更新</p>
-        
+        <div class="table-container">
         <table style="width: 100%; border-collapse: collapse;">
             <thead>
                 <tr style="background-color: #4299e1; color: white;">
@@ -501,6 +581,7 @@
                 </tr>
             </tbody>
         </table>
+    </div>
     </div>
 </div>
         
