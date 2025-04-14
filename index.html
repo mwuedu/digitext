@@ -328,380 +328,480 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>教育学部教科書（デジタル・紙）・指導書ポータル</h1>
-            <p>教育学部が所有する教科書・指導書に関する情報ポータルサイト</p>
-        </div>
-    </header>
+<header>
+    <div class="container">
+        <h1>📚 教科書・指導書ポータル 📚</h1>
+        <p>✨ 教育学部所有の教科書・指導書を簡単に探せる情報サイト ✨<br>
+        🔍 教育実習・授業準備・研究に役立つ教材をチェック！</p>
+    </div>
+</header>
     
     <nav>
         <div class="container">
-            <ul class="tabs">
-                <li><a href="javascript:void(0);" class="tab-link active" data-tab="guide">利用ガイド</a></li>
-                <li><a href="javascript:void(0);" class="tab-link" data-tab="digital">デジタル教科書一覧</a></li>
-                <li><a href="javascript:void(0);" class="tab-link" data-tab="paper">紙の教科書一覧</a></li>
-            </ul>
+                <ul class="tabs">
+                    <li><a href="javascript:void(0);" class="tab-link active" data-tab="guide">📋 利用ガイド</a></li>
+                    <li><a href="javascript:void(0);" class="tab-link" data-tab="paper">📕 紙の教科書・指導書一覧</a></li>
+                    <li><a href="javascript:void(0);" class="tab-link" data-tab="digital">💻 デジタル教科書一覧</a></li>
+                </ul>
         </div>
     </nav>
     
     <main class="container">
-        <!-- 利用ガイド -->
-        <div id="guide" class="tab-content active">
-            <h2 class="section-title">教科書・指導書利用ガイド</h2>
-            
-            <div class="card">
-                <h3 class="card-title">ポータルサイトについて</h3>
-                <p>このポータルサイトでは、教育学部で所有する教科書（デジタル・紙）・指導書の利用方法や貸出ルールについてご案内しています。 学習・研究・実習前の準備などにご活用ください。</p>
-            </div>
-            
-            <div class="card">
-                <h3 class="card-title">デジタル教科書の貸出ルールと手続き</h3>
-                <p>現在、デジタル教科書の貸出ルールと手続きについて検討中です。詳細が決まり次第、このページに情報を掲載いたします。</p>
-            </div>
-            
-            <div class="card">
-                <h3 class="card-title">デジタル教科書体験版一覧</h3>
-                <p>以下の出版社サイトでデジタル教科書の体験版を試すことができます。実際の教科書の機能や使用感を確認したい方はぜひご活用ください。</p>
-                <p class="text-sm" style="color: #666; margin-bottom: 15px;">2024年5月30日更新</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>出版社</th>
-                            <th class="text-center">デジタル教科書の体験版</th>
-                            <th class="text-center">操作説明マニュアル等</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>東京書籍</td>
-                            <td class="text-center"><a href="https://www.tokyo-shoseki.co.jp/ict/taiken" target="_blank">〇</a></td>
-                            <td class="text-center"><a href="https://d-support.tokyo-shoseki.co.jp/shou/index.html" target="_blank">〇</a></td>
-                        </tr>
-                        <tr>
-                            <td>学校図書</td>
-                            <td class="text-center"><a href="https://support.gakuto.co.jp/digi-nowtouse/" target="_blank">〇</a></td>
-                            <td class="text-center"><a href="https://support.gakuto.co.jp/digi-nowtouse/" target="_blank">〇</a></td>
-                        </tr>
-                        <tr>
-                            <td>教育出版</td>
-                            <td class="text-center"><a href="https://d-support.kyoiku-shuppan.co.jp/" target="_blank">〇</a></td>
-                            <td class="text-center"><a href="https://d-support.kyoiku-shuppan.co.jp/manual/" target="_blank">〇</a></td>
-                        </tr>
-                        <tr>
-                            <td>光村図書</td>
-                            <td class="text-center"><a href="https://2022-digital.mitsumura-tosho.co.jp/" target="_blank">〇</a></td>
-                            <td class="text-center"><a href="https://2022-digital.mitsumura-tosho.co.jp/" target="_blank">〇</a></td>
-                        </tr>
-                        <tr>
-                            <td>日本文教出版</td>
-                            <td class="text-center"><a href="https://www.nichibun-g.co.jp/digital_support_front/" target="_blank">〇</a></td>
-                            <td class="text-center"><a href="https://www.nichibun-g.co.jp/digital_support3/" target="_blank">〇</a></td>
-                        </tr>
-                        <tr>
-                            <td>帝国書院</td>
-                            <td class="text-center"><a href="https://www.teikokushoin.co.jp/junior/digital-textbook/" target="_blank">〇</a></td>
-                            <td class="text-center"><a href="https://ict.teikokushoin.co.jp/support/" target="_blank">〇</a></td>
-                        </tr>
-                        <tr>
-                            <td>大日本図書</td>
-                            <td class="text-center"><a href="https://www.dainippon-tosho.co.jp/digital_textbook/index.html" target="_blank">〇</a></td>
-                            <td class="text-center">
-                                <a href="https://www.dainippon-tosho.co.jp/newsletter/detail.php?id=328" target="_blank">〇</a>
-                                <span style="font-size: 0.85em; color: #666;">(学習者用)</span>
-                                <a href="https://www.dainippon-tosho.co.jp/newsletter/detail.php?id=329" target="_blank">〇</a>
-                                <span style="font-size: 0.85em; color: #666;">(指導者用)</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>啓林館</td>
-                            <td class="text-center"><a href="https://www.shinko-keirin.co.jp/keirinkan/digital/dtext/" target="_blank">〇</a></td>
-                            <td class="text-center"><a href="https://www.shinko-keirin.co.jp/keirinkan/sho/kensyudouga/" target="_blank">〇</a></td>
-                        </tr>
-                        <tr>
-                            <td>信州教育出版社</td>
-                            <td class="text-center"><a href="http://www.shinkyo-pub.or.jp/kyokasyo_sp/digital_textbook/digital_textbook_index.html" target="_blank">〇</a></td>
-                            <td class="text-center"></td>
-                        </tr>
-                        <tr>
-                            <td>教育芸術社</td>
-                            <td class="text-center"><a href="https://www.kyogei.co.jp/digitaltextbook/" target="_blank">〇</a></td>
-                            <td class="text-center"><a href="https://www.kyogei.co.jp/cloudtextbook" target="_blank">〇</a></td>
-                        </tr>
-                        <tr>
-                            <td>開隆堂</td>
-                            <td class="text-center"><a href="http://digital-kairyudo.jp/" target="_blank">〇</a></td>
-                            <td class="text-center"><a href="https://www.kairyudo.co.jp/contents/06_hanbai/digital-textbook/troubleshoot/210824.html" target="_blank">〇</a></td>
-                        </tr>
-                        <tr>
-                            <td>学研</td>
-                            <td class="text-center"><a href="https://gakkokyoiku.gakken.co.jp/" target="_blank">〇</a></td>
-                            <td class="text-center"></td>
-                        </tr>
-                        <tr>
-                            <td>廣済堂あかつき</td>
-                            <td class="text-center"><a href="https://www.aktk.co.jp/r3-doutoku/digital" target="_blank">〇</a></td>
-                            <td class="text-center"><a href="https://www.aktk.co.jp/wp/wp-content/themes/akatsuki/assets/img/doutoku-r3/files/2022user_manual.pdf" target="_blank">〇</a></td>
-                        </tr>
-                        <tr>
-                            <td>三省堂</td>
-                            <td class="text-center"><a href="https://tb.sanseido-publ.co.jp/digitaltext/" target="_blank">〇</a></td>
-                            <td class="text-center"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+
+<!-- 利用ガイド -->
+<div id="guide" class="tab-content active">
+    <h2 class="section-title">📋 教科書・指導書利用ガイド</h2>
+    
+    <div class="card">
+        <h3 class="card-title">🌟 ポータルサイトについて</h3>
+        <p>このポータルサイトでは、教育学部で所有する教科書（デジタル・紙）・指導書の利用方法や貸出ルールについてご案内しています。 学習・研究・実習前の準備などにご活用ください。</p>
+    </div>
+    
+    <div class="card">
+        <h3 class="card-title">教材の利用・貸出方法</h3>
+        
+        <div style="margin-bottom: 25px; padding: 10px; background-color: #f8fafc; border-radius: 5px;">
+            <h4 style="color: #2c5282; margin-bottom: 10px; font-size: 1.1rem;">📕 紙の教科書の利用・貸出</h4>
+            <ul style="padding-left: 20px; margin-bottom: 15px;">
+                <li>4階のアーカイブに保管しています。自由に手にとってください。</li>
+                <li><strong style="color: #e53e3e;">館外への持ち出しは禁止です。</strong>教室などに持っていった場合は<strong style="color: #e53e3e;">その日のうちに必ず返却</strong>してください。</li>
+                <li>他の利用者への配慮として、館内で一度に多数の教科書を持ち運ぶことはご遠慮ください。</li>
+                <li><em>ルール違反やマナーに反する利用が散見された場合は、貸出サービスを中止する場合があります。</em></li>
+            </ul>
         </div>
         
-        <!-- デジタル教科書一覧 -->
-        <div id="digital" class="tab-content">
-            <h2 class="section-title">デジタル教科書一覧</h2>
-            <p>教育学部が所有するデジタル教科書の一覧です。貸出を希望される方は、利用ガイドの貸出手続きをご確認ください。</p>
-            
-            <h3 class="card-title">小学校教科書</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>教科</th>
-                        <th>学年</th>
-                        <th>教科書会社</th>
-                        <th>利用形態</th>
-                        <th>ライセンス数</th>
-                        <th>利用制限</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>算数</td>
-                        <td>1〜6年</td>
-                        <td>啓林館</td>
-                        <td>クラウド</td>
-                        <td>各30</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>算数</td>
-                        <td>1〜6年</td>
-                        <td>東京書籍</td>
-                        <td>クラウド</td>
-                        <td>各30</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>国語</td>
-                        <td>1〜6年</td>
-                        <td>光村図書</td>
-                        <td>クラウド</td>
-                        <td>各30</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>国語</td>
-                        <td>1〜6年</td>
-                        <td>東京書籍</td>
-                        <td>クラウド</td>
-                        <td>各30</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>理科</td>
-                        <td>3〜6年</td>
-                        <td>啓林館</td>
-                        <td>クラウド</td>
-                        <td>各30</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>理科</td>
-                        <td>3〜6年</td>
-                        <td>東京書籍</td>
-                        <td>クラウド</td>
-                        <td>各30</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>社会</td>
-                        <td>3〜6年</td>
-                        <td>東京書籍</td>
-                        <td>クラウド</td>
-                        <td>各30</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>社会</td>
-                        <td>3〜6年</td>
-                        <td>教育出版</td>
-                        <td>クラウド</td>
-                        <td>各30</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>家庭科</td>
-                        <td>5・6年上・下</td>
-                        <td>開隆堂</td>
-                        <td>クラウド</td>
-                        <td>各20</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>英語</td>
-                        <td>5・6年</td>
-                        <td>東京書籍</td>
-                        <td>クラウド</td>
-                        <td>各30</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>英語</td>
-                        <td>5・6年</td>
-                        <td>光村図書</td>
-                        <td>クラウド</td>
-                        <td>各30</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>生活</td>
-                        <td>上・下</td>
-                        <td>東京書籍</td>
-                        <td>クラウド</td>
-                        <td>各30</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>音楽</td>
-                        <td>1〜6年</td>
-                        <td>教育芸術社</td>
-                        <td>クラウド・DVD</td>
-                        <td>各30</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>図工</td>
-                        <td>1・2年上下</td>
-                        <td>日本文教出版</td>
-                        <td>クラウド・DVD</td>
-                        <td>各50</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>図工</td>
-                        <td>3・4年上下</td>
-                        <td>日本文教出版</td>
-                        <td>クラウド・DVD</td>
-                        <td>各50</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>図工</td>
-                        <td>5・6年上下</td>
-                        <td>日本文教出版</td>
-                        <td>クラウド・DVD</td>
-                        <td>各50</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>図工</td>
-                        <td>1・2年上下</td>
-                        <td>開隆堂</td>
-                        <td>クラウド</td>
-                        <td>各20</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>図工</td>
-                        <td>3・4年上下</td>
-                        <td>開隆堂</td>
-                        <td>クラウド</td>
-                        <td>各20</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>図工</td>
-                        <td>5・6年上下</td>
-                        <td>開隆堂</td>
-                        <td>クラウド</td>
-                        <td>各20</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>道徳</td>
-                        <td>1〜6年</td>
-                        <td>光村図書</td>
-                        <td>クラウド・DVD</td>
-                        <td>各30</td>
-                        <td>DVDインストールは教員PCのみ</td>
-                    </tr>
-                    <tr>
-                        <td>保健</td>
-                        <td>3〜6年</td>
-                        <td>学研</td>
-                        <td>クラウド・DVD</td>
-                        <td>1</td>
-                        <td>DVDインストールは教員PCのみ</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <h3 class="card-title">中学校教科書</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>教科</th>
-                        <th>学年</th>
-                        <th>題名</th>
-                        <th>教科書会社</th>
-                        <th>ライセンス形態</th>
-                        <th>利用制限</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>英語</td>
-                        <td>1年</td>
-                        <td>中学校英語</td>
-                        <td>三省堂</td>
-                        <td>永久ライセンス</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>数学</td>
-                        <td>2年</td>
-                        <td>中学校数学</td>
-                        <td>大日本図書</td>
-                        <td>年間ライセンス</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div style="margin-bottom: 25px; padding: 10px; background-color: #ebf8ff; border-radius: 5px;">
+            <h4 style="color: #2c5282; margin-bottom: 10px; font-size: 1.1rem;">📗 指導書の利用・貸出</h4>
+            <ul style="padding-left: 20px; margin-bottom: 15px;">
+                <li>指導書はSE-422の本棚に施錠して保管しています。</li>
+                <li>教員の利用は、SE-422の助手にお声がけください。</li>
+                <li>学生の利用は教員の立会の元で利用が可能です。SE-422からの持ち出しは一切できません。</li>
+            </ul>
         </div>
         
-        <!-- 紙の教科書一覧 -->
-        <div id="paper" class="tab-content">
-            <h2 class="section-title">紙の教科書一覧</h2>
-            <p>教育学部が所有する紙の教科書の一覧です。詳細な情報は以下のPDFでご確認ください。</p>
-            
-            <div class="pdf-container">
-                <object data="textbooklist.pdf" type="application/pdf" width="100%" height="600">
-                    <p>お使いのブラウザでPDFを表示できません。<a href="textbooklist.pdf" target="_blank">PDFを直接開く</a>か、<a href="textbooklist.pdf" download>ダウンロード</a>してください。</p>
-                </object>
-            </div>
-            
-            <div class="pdf-actions">
-                <a href="textbooklist.pdf" target="_blank" class="btn">PDFを新しいタブで開く</a>
-                <a href="textbooklist.pdf" download class="btn">PDFをダウンロード</a>
-            </div>
+        <div style="margin-bottom: 25px; padding: 10px; background-color: #f8fafc; border-radius: 5px;">
+            <h4 style="color: #2c5282; margin-bottom: 10px; font-size: 1.1rem;">💻 デジタル教科書の利用・貸出</h4>
+            <p>現在、デジタル教科書の利用・貸出方法について検討中です。詳細が決まり次第、このページに情報を掲載いたします。</p>
         </div>
+    </div>
+    
+    <div class="card">
+        <h3 class="card-title">💳 デジタル教科書の個人購入</h3>
+        <div style="padding: 15px; background-color: #ebf8ff; border-radius: 5px;">
+            <p>教育実習や授業研究のために、学習者用デジタル教科書を個人で購入・利用できます（現在、東京書籍のみ）。</p>
+            
+            <h5 style="color: #4299e1; margin-top: 15px; margin-bottom: 8px; font-size: 1rem;">🛒 購入方法：Lentranceストアの利用</h5>
+            <p>Lentranceは複数の出版社が採用する学習用ICTプラットフォームで、PC・タブレット・スマートフォンから利用可能です。</p>
+            <p><a href="https://www.lentrance.com/store/" target="_blank" class="btn" style="display: inline-block; margin: 10px 0; padding: 8px 15px;">Lentranceストアにアクセス</a>（画面左上の「個人向け」を選択）</p>
+            
+            <h5 style="color: #4299e1; margin-top: 15px; margin-bottom: 8px; font-size: 1rem;">購入手順</h5>
+            <ol style="padding-left: 25px; margin-bottom: 15px;">
+                <li>Lentranceストアで無料の会員登録</li>
+                <li>希望するデジタル教科書を選択しカートに追加</li>
+                <li>購入手続き完了後、「本棚」から閲覧可能</li>
+            </ol>
+            
+            <h5 style="color: #4299e1; margin-top: 15px; margin-bottom: 8px; font-size: 1rem;">⚠️ 注意事項</h5>
+            <ul style="padding-left: 25px; margin-bottom: 15px;">
+                <li>購入は教員、児童・生徒・学生またはその保護者等に限られます</li>
+                <li>利用目的は授業、予習・復習、または授業研究の範囲内に限定されます</li>
+                <li>1ライセンスにつき1人の利用（共有不可）</li>
+                <li>ライセンスの有効期限は購入日から最初の年度末（3月31日）まで、または教科書の使用期間終了まで</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h3 class="card-title">🔍 デジタル教科書体験版一覧</h3>
+        <p>以下の出版社サイトでデジタル教科書の体験版を試すことができます。実際の教科書の機能や使用感を確認したい方はぜひご活用ください。</p>
+        <p class="text-sm" style="color: #666; margin-bottom: 15px;">2024年5月30日更新</p>
         
-        <!-- 有用なリンク -->
-        <!-- このセクションは削除しました -->
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #4299e1; color: white;">
+                    <th style="border: 1px solid #bee3f8; padding: 10px; text-align: left;">出版社</th>
+                    <th style="border: 1px solid #bee3f8; padding: 10px; text-align: center;">デジタル教科書の体験版</th>
+                    <th style="border: 1px solid #bee3f8; padding: 10px; text-align: center;">操作説明マニュアル等</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: #f8fafc;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">東京書籍</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://www.tokyo-shoseki.co.jp/ict/taiken" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://d-support.tokyo-shoseki.co.jp/shou/index.html" target="_blank">マニュアルを見る</a></td>
+                </tr>
+                <tr style="background-color: #ebf8ff;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">学校図書</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://support.gakuto.co.jp/digi-nowtouse/" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://support.gakuto.co.jp/digi-nowtouse/" target="_blank">マニュアルを見る</a></td>
+                </tr>
+                <tr style="background-color: #f8fafc;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">教育出版</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://d-support.kyoiku-shuppan.co.jp/" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://d-support.kyoiku-shuppan.co.jp/manual/" target="_blank">マニュアルを見る</a></td>
+                </tr>
+                <tr style="background-color: #ebf8ff;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">光村図書</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://2022-digital.mitsumura-tosho.co.jp/" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://2022-digital.mitsumura-tosho.co.jp/" target="_blank">マニュアルを見る</a></td>
+                </tr>
+                <tr style="background-color: #f8fafc;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">日本文教出版</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://www.nichibun-g.co.jp/digital_support_front/" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://www.nichibun-g.co.jp/digital_support3/" target="_blank">マニュアルを見る</a></td>
+                </tr>
+                <tr style="background-color: #ebf8ff;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">帝国書院</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://www.teikokushoin.co.jp/junior/digital-textbook/" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://ict.teikokushoin.co.jp/support/" target="_blank">マニュアルを見る</a></td>
+                </tr>
+                <tr style="background-color: #f8fafc;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">大日本図書</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://www.dainippon-tosho.co.jp/digital_textbook/index.html" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;">
+                        <a href="https://www.dainippon-tosho.co.jp/newsletter/detail.php?id=328" target="_blank">学習者用</a>
+                        <span style="display: inline-block; margin: 0 5px;">•</span>
+                        <a href="https://www.dainippon-tosho.co.jp/newsletter/detail.php?id=329" target="_blank">指導者用</a>
+                    </td>
+                </tr>
+                <tr style="background-color: #ebf8ff;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">啓林館</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://www.shinko-keirin.co.jp/keirinkan/digital/dtext/" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://www.shinko-keirin.co.jp/keirinkan/sho/kensyudouga/" target="_blank">マニュアルを見る</a></td>
+                </tr>
+                <tr style="background-color: #f8fafc;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">信州教育出版社</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="http://www.shinkyo-pub.or.jp/kyokasyo_sp/digital_textbook/digital_textbook_index.html" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;">―</td>
+                </tr>
+                <tr style="background-color: #ebf8ff;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">教育芸術社</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://www.kyogei.co.jp/digitaltextbook/" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://www.kyogei.co.jp/cloudtextbook" target="_blank">マニュアルを見る</a></td>
+                </tr>
+                <tr style="background-color: #f8fafc;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">開隆堂</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="http://digital-kairyudo.jp/" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://www.kairyudo.co.jp/contents/06_hanbai/digital-textbook/troubleshoot/210824.html" target="_blank">マニュアルを見る</a></td>
+                </tr>
+                <tr style="background-color: #ebf8ff;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">学研</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://gakkokyoiku.gakken.co.jp/" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;">―</td>
+                </tr>
+                <tr style="background-color: #f8fafc;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">廣済堂あかつき</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://www.aktk.co.jp/r3-doutoku/digital" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://www.aktk.co.jp/wp/wp-content/themes/akatsuki/assets/img/doutoku-r3/files/2022user_manual.pdf" target="_blank">マニュアルを見る</a></td>
+                </tr>
+                <tr style="background-color: #ebf8ff;">
+                    <td style="border: 1px solid #bee3f8; padding: 10px;">三省堂</td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;"><a href="https://tb.sanseido-publ.co.jp/digitaltext/" target="_blank">体験版を見る</a></td>
+                    <td style="border: 1px solid #bee3f8; padding: 10px; text-align: center;">―</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+        
+
+        
+<!-- 紙の教科書一覧 -->
+<div id="paper" class="tab-content">
+    <h2 class="section-title">紙の教科書一覧</h2>
+    <p>教育学部が所有する紙の教科書と指導書の一覧です。</p>
+    
+    <div class="card">
+        <table style="border-collapse: collapse; width: 100%;">
+            <tr>
+                <th style="width: 15%; border: 1px solid #bee3f8; background-color: white;"></th>
+                <th style="width: 42.5%; border: 1px solid #bee3f8; background-color: #ffcccb; text-align: center; padding: 10px;">教科書</th>
+                <th style="width: 42.5%; border: 1px solid #bee3f8; background-color: #d4f1c5; text-align: center; padding: 10px;">指導書</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #bee3f8; background-color: white; text-align: center; padding: 10px;"><strong>保管場所</strong></td>
+                <td style="border: 1px solid #bee3f8; background-color: #ffcccb; text-align: center; padding: 10px;">4階アーカイブ</td>
+                <td style="border: 1px solid #bee3f8; background-color: #d4f1c5; text-align: center; padding: 10px;">SE-422</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; text-align: center; padding: 10px; font-weight: bold;">国語</td>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">光村図書、東京書籍、教育出版</td>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">光村図書、東京書籍</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; text-align: center; padding: 10px; font-weight: bold;">算数</td>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">啓林館、東京書籍、大日本図書、<br>学校図書、教育出版、日本文教出版</td>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">啓林館、東京書籍</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; text-align: center; padding: 10px; font-weight: bold;">理科</td>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">啓林館、東京書籍、大日本図書、<br>学校図書、教育出版、信州教育出版社</td>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">啓林館、東京書籍</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; text-align: center; padding: 10px; font-weight: bold;">社会</td>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">東京書籍、教育出版、日本文教出版<br>地図帳：東京書籍、帝国書院</td>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">東京書籍、教育出版</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; text-align: center; padding: 10px; font-weight: bold;">生活</td>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">東京書籍、大日本図書、学校図書、<br>教育出版、信州教育出版社、光村図書、啓林館</td>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">東京書籍、啓林館</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; text-align: center; padding: 10px; font-weight: bold;">英語</td>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">東京書籍、開隆堂、三省堂、<br>教育出版、光村図書、啓林館</td>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">東京書籍、光村図書</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; text-align: center; padding: 10px; font-weight: bold;">図画工作</td>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">日本文教出版、開隆堂</td>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">日本文教出版、開隆堂</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; text-align: center; padding: 10px; font-weight: bold;">音楽</td>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">教育芸術社、教育出版</td>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">教育芸術社、教育出版</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; text-align: center; padding: 10px; font-weight: bold;">家庭科</td>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">開隆堂、東京書籍</td>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">開隆堂</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; text-align: center; padding: 10px; font-weight: bold;">保健</td>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">Gakken、東京書籍、大日本図書、<br>大修館書店、文教社、光文書院</td>
+                <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">Gakken</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; text-align: center; padding: 10px; font-weight: bold;">道徳</td>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">光村図書、東京書籍、教育出版、<br>日本文教出版、光文書院</td>
+                <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">光村図書</td>
+            </tr>
+        </table>
+    </div>
+</div>
+        
+<!-- デジタル教科書一覧 -->
+<div id="digital" class="tab-content">
+    <h2 class="section-title">デジタル教科書一覧</h2>
+    <p>教育学部が所有するデジタル教科書の一覧です。貸出を希望される方は、利用ガイドの貸出手続きをご確認ください。</p>
+    
+    <h3 class="card-title">小学校教科書</h3>
+    <table style="border-collapse: collapse; width: 100%;">
+        <tr>
+            <th style="border: 1px solid #bee3f8; background-color: #4299e1; color: white; text-align: center; padding: 10px;">教科</th>
+            <th style="border: 1px solid #bee3f8; background-color: #4299e1; color: white; text-align: center; padding: 10px;">学年</th>
+            <th style="border: 1px solid #bee3f8; background-color: #4299e1; color: white; text-align: center; padding: 10px;">教科書会社</th>
+            <th style="border: 1px solid #bee3f8; background-color: #4299e1; color: white; text-align: center; padding: 10px;">利用形態</th>
+            <th style="border: 1px solid #bee3f8; background-color: #4299e1; color: white; text-align: center; padding: 10px;">ライセンス数</th>
+            <th style="border: 1px solid #bee3f8; background-color: #4299e1; color: white; text-align: center; padding: 10px;">利用制限</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">算数</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">1〜6年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">啓林館</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">各30</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">算数</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">1〜6年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">東京書籍</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">各30</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">国語</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">1〜6年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">光村図書</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">各30</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">国語</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">1〜6年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">東京書籍</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">各30</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">理科</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">3〜6年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">啓林館</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">各30</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">理科</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">3〜6年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">東京書籍</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">各30</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">社会</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">3〜6年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">東京書籍</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">各30</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">社会</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">3〜6年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">教育出版</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">各30</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">家庭科</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">5・6年上・下</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">開隆堂</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">各20</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">英語</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">5・6年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">東京書籍</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">各30</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">英語</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">5・6年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">光村図書</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">各30</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">生活</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">上・下</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">東京書籍</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">各30</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">音楽</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">1〜6年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">教育芸術社</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">クラウド・DVD</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">各30</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">図工</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">1・2年上下</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">日本文教出版</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">クラウド・DVD</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">各50</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">図工</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">3・4年上下</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">日本文教出版</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">クラウド・DVD</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">各50</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">図工</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">5・6年上下</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">日本文教出版</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">クラウド・DVD</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">各50</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">図工</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">1・2年上下</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">開隆堂</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">各20</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">図工</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">3・4年上下</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">開隆堂</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">各20</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">図工</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">5・6年上下</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">開隆堂</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">クラウド</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">各20</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">道徳</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">1〜6年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">光村図書</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">クラウド・DVD</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">各30</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">DVDインストールは教員PCのみ</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">保健</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">3〜6年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">学研</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">クラウド・DVD</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">1</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">DVDインストールは教員PCのみ</td>
+        </tr>
+    </table>
+    
+    <h3 class="card-title">中学校教科書</h3>
+    <table style="border-collapse: collapse; width: 100%; margin-bottom: 30px;">
+        <tr>
+            <th style="border: 1px solid #bee3f8; background-color: #4299e1; color: white; text-align: center; padding: 10px;">教科</th>
+            <th style="border: 1px solid #bee3f8; background-color: #4299e1; color: white; text-align: center; padding: 10px;">学年</th>
+            <th style="border: 1px solid #bee3f8; background-color: #4299e1; color: white; text-align: center; padding: 10px;">題名</th>
+            <th style="border: 1px solid #bee3f8; background-color: #4299e1; color: white; text-align: center; padding: 10px;">教科書会社</th>
+            <th style="border: 1px solid #bee3f8; background-color: #4299e1; color: white; text-align: center; padding: 10px;">ライセンス形態</th>
+            <th style="border: 1px solid #bee3f8; background-color: #4299e1; color: white; text-align: center; padding: 10px;">利用制限</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">英語</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">1年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">中学校英語</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">三省堂</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;">永久ライセンス</td>
+            <td style="border: 1px solid #bee3f8; background-color: #f8fafc; padding: 10px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">数学</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">2年</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">中学校数学</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">大日本図書</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;">年間ライセンス</td>
+            <td style="border: 1px solid #bee3f8; background-color: #ebf8ff; padding: 10px;"></td>
+        </tr>
+    </table>
+</div>
     </main>
     
-    <footer>
-        <div class="container">
-            <p>教育学部デジタル教科書ポータル © 2025 教育学部</p>
-            <p>お問い合わせ: digital-textbook@example.ac.jp</p>
-        </div>
-    </footer>
+<footer>
+    <div class="container">
+        <p>📘 教育学部デジタル教科書ポータル</p>
+    </div>
+</footer>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
